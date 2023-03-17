@@ -26,8 +26,12 @@ int main(void)
 						putchar(' ');
 						putchar(n3);
 						putchar(n4);
+						if(n1 == 57 && n2 == 56 && n3 == 57 && n3 == 57 )
+						{
+						} else {
 						putchar(',');
 						putchar(' ');
+						}
 						}
 					n4++;
 					} while (n4 < 58);
@@ -37,4 +41,6 @@ int main(void)
 			} while (n2 < 57);
 		n1++;
 		} while (n1 < 58);
+	putchar('\n');
+	return (0);
 }
