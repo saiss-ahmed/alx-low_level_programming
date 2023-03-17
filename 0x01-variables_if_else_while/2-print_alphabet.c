@@ -8,12 +8,16 @@
 
 int main(void)
 {
+	int i = 0;
 	char alpha[27] = "abcdefghijklmnopqrstuvwxyz";
+	int j = strlen(alpha);
 
-	for (int i = 0, n = strlen(alpha); i < n ; i++)
-	{
+	do {
 		putchar(alpha[i]);
-	}
+		i++;
+	} while (i < j);
+
 	putchar('\n');
+
 	return (1);
 }
