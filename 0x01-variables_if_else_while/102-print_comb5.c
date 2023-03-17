@@ -16,17 +16,17 @@ int main(void)
 				int n3 = 48;
 
 				do {
-					int n4 = 49;
+					int n4 = 48;
 
-					do {
-					if (n3 >= n1 && n4 > n2)
+					do {	
+						if(n3 >= n1 && n4 >= n2)
 						{
 						putchar(n1);
 						putchar(n2);
 						putchar(' ');
 						putchar(n3);
 						putchar(n4);
-						if(n1 == 57 && n2 == 56 && n3 == 57 && n3 == 57 )
+						if(n1 == 57 && n2 == 56 && n3 == 57 && n4 == 57 )
 						{
 						} else {
 						putchar(',');
