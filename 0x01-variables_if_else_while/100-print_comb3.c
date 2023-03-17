@@ -8,9 +8,11 @@
 int main(void)
 {
 	int i = 48;
-	do{
+
+	do {
 		int j = 49;
-		do{
+
+		do {
 			if (i < j)
 			{
 				putchar(i);
@@ -25,9 +27,9 @@ int main(void)
 				}
 			}
 			j++;
-		} while(j < 58);
+		} while (j < 58);
 		i++;
-	} while(i < 57);
+	} while (i < 57);
 	putchar('\n');
 	return (0);
 }
