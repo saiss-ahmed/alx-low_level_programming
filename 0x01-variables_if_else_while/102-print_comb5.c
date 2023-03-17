@@ -19,7 +19,7 @@ int main(void)
 					int n4 = 48;
 
 					do {	
-						if(n3 >= n1 && n4 >= n2)
+						if(n3 >= n1 && n4 > n2)
 						{
 						putchar(n1);
 						putchar(n2);
