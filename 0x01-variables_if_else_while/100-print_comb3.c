@@ -7,10 +7,10 @@
 
 int main(void)
 {
-	for (int i = 48; i < 57; i++)
-	{
-		for (int j = 49 ; j < 58; j++)
-		{
+	int i = 48;
+	do{
+		int j = 49;
+		do{
 			if (i < j)
 			{
 				putchar(i);
@@ -24,8 +24,10 @@ int main(void)
 				putchar(' ');
 				}
 			}
-		}
-	}
+			j++;
+		} while(j < 58);
+		i++;
+	} while(i < 57);
 	putchar('\n');
 	return (0);
 }
