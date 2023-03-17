@@ -17,7 +17,7 @@ int main(void)
 
 			do {
 
-			if (i < j)
+			if (i < j && j < k)
 			{
 				putchar(i);
 				putchar(j);
