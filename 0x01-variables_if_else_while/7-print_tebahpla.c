@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	char alpha[28] = "abcdefghijklmnopqrstuvwxyz";
+	char alpha[] = "abcdefghijklmnopqrstuvwxyz";
 	int i = strlen(alpha);
 	int j = 0;
 
