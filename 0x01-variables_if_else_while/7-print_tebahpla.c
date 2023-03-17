@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 /**
  *main - Entry point
  *
@@ -8,14 +7,12 @@
 
 int main(void)
 {
-	char alpha[] = "abcdefghijklmnopqrstuvwxyz";
-	int i = strlen(alpha);
-	int j = 0;
+	int j = 122;
 
 	do {
-		putchar(alpha[i]);
-		i--;
-	} while (i >= j);
+		putchar(j);
+		j--;
+	} while (j > 96);
 
 	putchar('\n');
 
