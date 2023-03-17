@@ -15,7 +15,7 @@ int main(void)
 	do {
 		putchar(alpha[i]);
 		i--;
-	} while (i > j);
+	} while (i >= j);
 
 	putchar('\n');
 
