@@ -4,15 +4,19 @@
  *Return: always 0 (success)
  */
 
-int main(void)
-{
-int n;
-int x = 52;
-int sum = 1;
-	for (n = 2; n < x ; n++)
+int main() {
+    int first = 1;
+    int second = 2;
+    int i;
+    int sum;
+
+    printf("%i, ", first);
+    printf("%i, ", second);
+	for (i = 3; i <= 50; i++) 
 	{
-	sum += n;
-	printf("%i, \n", sum);
+		sum = sum + i;
+		printf("%i, ", next);
 	}
-	return (0);
+	printf('\n');
+    return (0);
 }
