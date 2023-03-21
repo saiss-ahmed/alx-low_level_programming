@@ -9,10 +9,11 @@
 int print_last_digit(int x)
 {
 	int last;
-       	if (x == INT_MIN)
+
+	if (x == INT_MIN)
 	{
-		last = 8;
-	       	_putchar(last + '0');
+		last = 8
+		_putchar(last + '0');
 		return (last);
 	}
 	if (x > 0)
