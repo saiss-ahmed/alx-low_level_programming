@@ -4,7 +4,7 @@
  *
  *Return: always 1(Success)
  */
-int print_alphabet(void)
+void print_alphabet(void)
 {
 	int i = 97;
 
@@ -13,5 +13,4 @@ int print_alphabet(void)
 		i++;
 	} while (i < 123);
 	_putchar('\n');
-	return (1);
 }
