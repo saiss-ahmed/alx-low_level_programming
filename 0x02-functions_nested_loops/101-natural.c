@@ -9,18 +9,14 @@ int main(void)
 
 void sum_print(void)
 {
-	int x = 1024;
+	int x;
 	int sum = 0;
 
-	for (int i = 0; i < x ; i++)
+	for ( x = 0; x < 1024; i++)
 	{
-		if (i % 3 == 0)
+		if ((x % 3 == 0) || (x % 5 == 0))
 		{
-			sum = sum + i;
-		}
-		if (i % 5 == 0)
-		{
-			sum = sum + i;
+			sum += x;
 		}
 	}
 	printf("%i\n", sum);
