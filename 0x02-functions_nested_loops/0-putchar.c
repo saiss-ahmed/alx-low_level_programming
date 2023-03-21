@@ -8,6 +8,6 @@ int print(char *array, int length);
 int main(void)
 {
 
-	print("_putchar \n", strlen("_putchar \n"));
+	print("_putchar\n", strlen("_putchar\n"));
 	return (0);
 }
