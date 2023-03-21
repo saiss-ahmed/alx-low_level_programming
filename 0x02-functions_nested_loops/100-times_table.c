@@ -40,11 +40,12 @@ int row, column, result;
 						_putchar('0' + (result / 10) % 10);
 						_putchar('0' + (result % 10));
 					}
-					if (column == 0 && row == 0)
-					{
-					_putchar(' ');
-					_putchar(' ');
 					}
+				if(row == 0 && column == 0)
+				{
+				_putchar(' ');
+				_putchar(' ');
+				}
 				}
 			}
 			_putchar('\n');
