@@ -29,7 +29,7 @@ do {
 		_putchar(' ');
 		}else if ( i == 9 && j == 9)
 		{
-		_putchar('\n');
+		
 		}
 		j++;
 		} while (j < 10);
