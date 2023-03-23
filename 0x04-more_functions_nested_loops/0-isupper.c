@@ -13,7 +13,7 @@ int _isupper(int c)
 	{
 		val = 0;
 	}
-	else if ((c >= 'Z' && c <= 'Z') || (c >= 65 && c <= 90))
+	else
 	{
 		val = 1;
 	}
