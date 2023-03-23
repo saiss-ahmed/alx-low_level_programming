@@ -11,9 +11,10 @@ void print_triangle(int size)
 	int l = 1;
 	int x = size;
 
-	if (size == 0)
+	if (size <= 0)
 	{
 		_putchar('\n');
+		break;
 	}
 	for (i = 0; i < x; i++)
 	{
