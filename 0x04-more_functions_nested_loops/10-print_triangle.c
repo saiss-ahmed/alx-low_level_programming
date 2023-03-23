@@ -1,35 +1,38 @@
 #include "main.h"
-
 /**
- * print_triangle - print backwards triangle of n size
- * @size: size of square
+ * print_triangle - Function that prints a triangle, followed by a new line.
+ * @size: the int for the paramaters of my function
+ * Return: Always 0.
  */
-
 void print_triangle(int size)
 {
-	int i, j, k;
-	int l = 1;
-	int x = size;
+	int x, y = 0;
 
-	if (size <= 0)
+	if (size > 0)
+	{
+		while (y < size)
+		{
+			int space = size - y - 1;
+
+			while (x < size)
+			{
+				if (space > x)
+				{
+				_putchar(' ');
+				}
+				else
+				{
+					_putchar('#');
+				}
+				x++;
+			}
+			y++;
+			x = 0;
+			_putchar ('\n');
+		}
+	}
+	else
 	{
 		_putchar('\n');
-	}
-	if(x > 0)
-	{
-		for (i = 0; i < x; i++)
-		{
-			for (j = 0; j < size; j++)
-			{
-				_putchar(' ');
-			}
-			for (k = 0; k < l; k++)
-			{
-				_putchar('#');
-			}
-			size--;
-			l++;
-			_putchar('\n');
-		}
 	}
 }
