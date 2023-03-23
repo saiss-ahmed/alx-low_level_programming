@@ -1,7 +1,9 @@
 #include "main.h"
 /**
- *
- * */
+ *_isdigit - a function that checks if the char is a number
+ *@c: the char we are  testing
+ *Return: either 1 or 0
+ */
 
 int _isdigit(int c)
 {
@@ -9,7 +11,7 @@ int _isdigit(int c)
 	{
 		return (1);
 	}
-	else 
+	else
 	{
 		return (0);
 	}
