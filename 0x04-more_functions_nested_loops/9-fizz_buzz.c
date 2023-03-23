@@ -1,37 +1,27 @@
 #include <stdio.h>
+
 /**
- *main - entry point
- *Return: always 0 (success)
+ * main - print square of n size
+ * Return: 0 if succesful
  */
 
 int main(void)
 {
-	int i;
+int x;
 
-	for (i = 1; i <= 100; i++)
-	{
-		if (i % 3 == 0 && i % 5 == 0)
-		{
-			printf("FizzBuzz");
-			printf(" ");
-		}
-		else if (i % 3 == 0)
-		{
-			printf("Fizz");
-			printf(" ");
-		}
-		else if (i % 5 == 0)
-		{
-			printf("Buzz");
-			printf(" ");
-		}
-		else
-		{
-		printf("%i", i);
+for (x = 1; x <= 100; x++)
+{
+	if (x % 3 == 0 && x % 5 == 0)
+		printf("FizzBuzz");
+	else if (x % 3 == 0)
+		printf("Fizz");
+	else if (x % 5 == 0)
+		printf("Buzz");
+	else
+		printf("%d", x);
+		if (x < 100)
 		printf(" ");
-		}
-	}
-	printf("\n");
-	return (0);
-
+}
+putchar('\n');
+return (0);
 }
