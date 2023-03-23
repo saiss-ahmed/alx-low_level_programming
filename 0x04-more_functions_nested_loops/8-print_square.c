@@ -1,14 +1,17 @@
 #include "main.h"
-/***/
+/**
+ *print_square -  a function that prints a square, followed by a new line.
+ *@size: input from user
+ */
 
 void print_square(int size)
 {
 	int i;
 	int j;
-	
+
 	for (i = 0; i <= size; i++)
 	{
-		for(j  = 0; j < size; j++)
+		for (j  = 0; j < size; j++)
 		{
 			_putchar('#');
 		}
