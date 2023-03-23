@@ -1,31 +1,32 @@
 #include "main.h"
+
 /**
- *print_triangle - a function that prints a triangle
- * @size: input from user
+ * print_triangle - print backwards triangle of n size
+ * @size: size of square
  */
 
 void print_triangle(int size)
 {
-	int i;
-	int j;
-	int k;
+	int i, j, k;
+	int l = 1;
 	int x = size;
-
+	
+	if(size == 0)
+	{
+		_putchar('\n');
+	}
 	for (i = 0; i < x; i++)
 	{
-		for (j = 0; j < size; j++)
+		for(j = 0; j < size; j++ )
 		{
 			_putchar(' ');
 		}
-		for (k = 0; k <= i; k++)
+		for (k = 0; k < l; k++ )
 		{
 			_putchar('#');
 		}
-		_putchar('\n');
 		size--;
-	}
-	if (x <= 0)
-	{
-	_putchar('\n');
+		l++;
+		_putchar('\n');
 	}
 }
