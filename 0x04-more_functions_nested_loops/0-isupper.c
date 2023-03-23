@@ -1,4 +1,4 @@
-#include "main.c"
+#include "main.h"
 /**
  *_isupper - a function that checks if the char is upper or lower
  *@c: the char trying to check
@@ -8,12 +8,13 @@
 int _isupper(int c)
 {
 
-	if ((c >= 65 && c <= 90) || (c >= 'A' && c <= 'Z'))
+	if (c >= 65 && c <= 90)
 	{
 		return (1);
 	}
-	else if ((c >= 97  && c <= 122) || (c >= 'a' && c <= 'z'))
+	else if (c >= 97  && c <= 122)
 	{
 		return (0);
 	}
+	return (0);
 }
