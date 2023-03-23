@@ -9,13 +9,13 @@ int _isupper(int c)
 {
 	int val;
 
-	if ((c >= 'a' && c <= 'z') || (c >= 97 && c <= 122))
+	if ((c >= 'A' && c <= 'Z') || (c >= 65 && c <= 90))
 	{
-		val = 0;
+		val = 1;
 	}
 	else
 	{
-		val = 1;
+		val = 0;
 	}
 	return (val);
 }
