@@ -7,15 +7,13 @@
 
 int _isupper(int c)
 {
-	int val;
 
 	if ((c >= 'A' && c <= 'Z') || (c >= 65 && c <= 90))
 	{
-		val = 1;
+		return (1);
 	}
 	else
 	{
-		val = 0;
+		return (0);
 	}
-	return (val);
 }
