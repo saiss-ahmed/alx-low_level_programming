@@ -26,11 +26,8 @@ void print_number(int n)
 		_putchar('0');
 	}
 	do {
-		if (rev > 0)
-		{
 			_putchar(rev % 10 + '0');
 			rev = rev / 10;
-		}
 
 	} while (rev > 0);
 
