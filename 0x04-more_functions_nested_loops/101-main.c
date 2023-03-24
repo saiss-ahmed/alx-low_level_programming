@@ -17,5 +17,6 @@ int main(void)
     _putchar('\n');
     print_number(-98);
     _putchar('\n');
+    print_number(1.2);
     return (0);
 }

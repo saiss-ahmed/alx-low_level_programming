@@ -1,34 +1,22 @@
 #include "main.h"
-#include <stdio.h>
-/**
- * print_number - a function that prints an integer.
- *@n: input from user
- */
 
+/**
+ * print_number - Prints an integer.
+ * @n: The integer to be printed.
+ */
 void print_number(int n)
 {
-	int rev;
-	int rem = 0;
+	 int num = n;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		n = -n;
+		num = -num;
 	}
-	while (n != 0)
-	{
-		rem = n % 10;
-		rev = rev * 10 + rem;
-		n = n / 10;
-	}
-	if (rev == 0)
-	{
-		_putchar('0');
-	}
-	do {
-			_putchar(rev % 10 + '0');
-			rev = rev / 10;
 
-	} while (rev > 0);
-
+	if ((num / 10) > 0)
+	{
+		print_number(num / 10);
+	}
+	_putchar((num % 10) + '0');
 }
