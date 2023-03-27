@@ -6,19 +6,31 @@
 
 void print_rev(char *s)
 {
-	int len = 0;
+	int len = _strlen(s);
 	int i;
+
+	for (i = len - 1; i >= 0; i--)
+	{
+		_putchar(s[i]);
+	}
+	_putchar('\n');
+
+}
+/**
+ *_strlen - print the length of a string
+ *@s: the first char of th string;
+ *Return: len
+ */
+int _strlen(char *s)
+{
+	int len = 0;
 
 	while (*s != '\0')
 	{
 		len++;
 		s++;
 	}
-	for (i = len; i >=0; i--)
-	{
-		_putchar(*s);
-		s--;
-	}
-	_putchar('\n');
 
+	return (len);
 }
+
