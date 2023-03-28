@@ -9,28 +9,30 @@
 void print_array(int *a, int n)
 {
 	int x = 0;
-
-	while (x < n - 1)
+	if (n > 0)
 	{
+		while (x < n - 1)
+		{
+			if (a[x] < 0)
+			{
+				a[x] = -a[x];
+				printf("-%d, ", a[x]);
+			}
+			else
+			{
+				printf("%d, ", a[x]);
+			}
+			x++;
+		}
 		if (a[x] < 0)
 		{
 			a[x] = -a[x];
-			printf("-%d, ", a[x]);
+			printf("-%d", a[x]);
 		}
 		else
 		{
-			printf("%d, ", a[x]);
+		printf("%d", a[x]);
 		}
-		x++;
 	}
-	if (a[x] < 0)
-	{
-		a[x] = -a[x];
-		printf("-%d", a[x]);
-	}
-	else
-	{
-	printf("%d", a[x]);
-	}
-	printf("\n");
+		printf("\n");
 }
