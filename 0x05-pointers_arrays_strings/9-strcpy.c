@@ -1,5 +1,10 @@
 #include "main.h"
-/***/
+/**
+ *_strcpy - a function that copy a string to an array
+ *@dest: the array you will copy to
+ *@src: the string you are copying
+ *Return: the array you are copying to
+ */
 
 char *_strcpy(char *dest, char *src)
 {
