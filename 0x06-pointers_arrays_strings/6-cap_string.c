@@ -5,21 +5,42 @@
  *Return: always x
  */
 
-char *cap_string(char *x)
+char *cap_string(char *str)
 {
-	int i = 1;
-	if (x[0] >= 'a' && x[0] <= 'z')
-	{
-		x[0] -= 32; 
-	}
+	    int i = 0;
+	int capitalize_next = 1;
 
-	while (x[i] != '\0')
+	while (str[i] != '\0')
 	{
-		if (x[i] >= 'a' && x[i] <= 'z' && (x[i - 1] == '\t' || x[i - 1] == ' ' || x[i - 1] == ',' || x[i - 1] == ';' || x[i - 1] == '.' || x[i - 1] == '!' || x[i - 1] == '?' || x[i - 1] == '"' || x[i - 1] == '(' || x[i - 1] == ')' || x[i - 1] == '{' || x[i - 1] == '}'))
+		switch (str[i])
 		{
-			x[i] -= 32;
+			case ' ':
+			case '\t':
+			case '\n':
+			case ',':
+			case ';':
+			case '.':
+			case '!':
+			case '?':
+			case '\"':
+			case '(':
+			case ')':
+			case '{':
+			case '}':
+				capitalize_next = 1;
+			break;
+			default:
+				if (capitalize_next && str[i] >= 'a' && str[i] <= 'z')
+				{
+					str[i] -= 32;
+					capitalize_next = 0;
+				}
+				else
+				{
+					capitalize_next = 0;
+				}
 		}
 		i++;
 	}
-	return (x);
+	return (str);
 }
