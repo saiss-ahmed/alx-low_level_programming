@@ -5,23 +5,27 @@
  */
 void print_number(int n)
 {
-int div = 1;
-int digit = 0;
-if (n < 0)
-{
-_putchar('-');
-n = -n;
-}
-while (div <= n / 10)
-{
-div *= 10;
-}
-while (div > 0)
-{
-digit = n / div;
-_putchar(digit + '0');
-n %= div;
-div /= 10;
-}
+	int count, y, k;
+
+	y = 1000000000;
+
+	if (n == 0)
+		_putchar('0');
+	else if (n > 0)
+		n *= -1;
+	else
+		_putchar('-');
+	for (count = 0; count < 10; count++, y /= 10)
+	{
+		if (n / y == 0)
+			continue;
+		else
+		{
+			k = (-(n / y) % 10);
+			if (k < 0)
+				k *= -1;
+			_putchar(k + '0');
+		}
+	}
 }
 
