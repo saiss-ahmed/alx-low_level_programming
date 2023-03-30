@@ -5,7 +5,7 @@
  */
 void print_number(int n)
 {
-	int a, b;
+	int a = 0, b = 0;
 	int c = 1000000000;
 	int d = n;
 
@@ -21,16 +21,19 @@ void print_number(int n)
 		b = b * 10 + a;
 		d = d / 10;
 	}
-	while (b > 0)
-	{
-		_putchar(b % 10 + '0');
-		b = b / 10;
-	}
 	if (n == 0)
 	{
 		_putchar('0');
 	}
-	else if (n > 0)
+	else
+	{
+		while (b > 0)
+		{
+			_putchar(b % 10 + '0');
+			b = b / 10;
+		}
+	}
+	if (n > 0)
 	{
 		while (c >= 10)
 		{
@@ -38,7 +41,8 @@ void print_number(int n)
 			{
 				_putchar('0');
 			}
-			c = c / 10;
+		c = c / 10;
 		}
 	}
 }
+
