@@ -1,23 +1,24 @@
 #include "main.h"
 /**
  *_strspn - a function that gets the length of a prefix substring.
- *@s: The first argument, the big string
- *@accept: The second, the little one
- *Return: returns the length of the match,
+ *@s: string
+ *@accept: another string
+ *Return: returns counter
  */
-
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int _strspn(char *s, char *accept)
-{
-	unsigned int count = 0, x, i;
+	int i, j;
+	int counter = 0;
 
-	for (x = 0; s[x] != '\0' && x == count; x++)
-		for (i = 0; accept[i] != '\0'; i++)
-			if (s[x] == accept[i])
-				count++;
-
-	return (count);
-}
-
+	for (i = 0; s[i] != '\0' && i == counter; i++)
+	{
+		for (j = 0; accept[j] != '\0'; j++)
+		{
+			if (accept[j] == s[i])
+		{
+			counter++;
+		}
+		}
+	}
+	return (counter);
 }
