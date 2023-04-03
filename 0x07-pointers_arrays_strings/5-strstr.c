@@ -9,11 +9,11 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-int x, b;
+int a, b;
 
 	for (a = 0; haystack[a]; a++)
 	{
-		for (y = 0; needle[y] && haystack[a + b]; b++)
+		for (y = 0; needle[b] && haystack[a + b]; b++)
 		{
 			if (haystack[a + b] != needle[b])
 			{
