@@ -10,42 +10,22 @@ unsigned int _strspn(char *s, char *accept)
 {
 	int i, j;
 	unsigned int counter = 0;
-	int len1 = _strlen(s);
-	int len2 = _strlen(accept);
 
-	for (i = 0; i < len2; i++)
+	for (i = 0; accept[i] != '\0'; i++)
 	{
 		int x = 0;
-
-		for (j = 0; j < len1; j++)
+		for (j = 0;s[j] != '\0'; j++)
 		{
 			if (accept[i] == s[j])
 			{
 				counter++;
 				x++;
 			}
-			else if (accept[i] != s[j] && x > 0)
+			else if (x > 0)
 			{
 				break;
 			}
 		}
 	}
 	return (counter);
-}
-
-/**
- *_strlen - counts
- *@s: string or smtg
- *Return: counter
- */
-
-int _strlen(char *s)
-{
-int counter = 0;
-while (*s != '\0')
-{
-counter++;
-s++;
-}
-return (counter);
 }
