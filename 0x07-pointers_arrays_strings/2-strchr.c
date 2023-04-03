@@ -1,23 +1,26 @@
 #include "main.h"
+
 /**
  *_strchr - a function that locates a character in a string.
- *@s: the source sring
- *@c: the letter that want to find
- *Return: always s
+ *@s: main string
+ *@c: character to be exaamened
+ *Return: returns
  */
+
 char *_strchr(char *s, char c)
 {
-	while (*s)
-	{
-		if (*s == c)
-		{
-			return (s);
-		}
-		s++;
-		if (!c)
-		{
-		return (s);
-		}
-	}
-	return (0);
+char *x = s;
+while (*x)
+{
+if (*x == c)
+{
+return (x);
+}
+x++;
+}
+if (!c)
+{
+return (x);
+}
+return (0);
 }
