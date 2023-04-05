@@ -9,5 +9,6 @@ int squareRootHelper(int n, int x);
 int is_prime_number(int n);
 int primeHelper(int n, int x);
 int is_palindrome(char *s);
+int wildcmp(char *s1, char *s2);
 int _str(char *s);
 int palindromeHelper (char *s, int x, int i);
