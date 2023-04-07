@@ -8,30 +8,19 @@
 
 char *_strcpy(char *dest, char *src)
 {
-	int len = _strlen(src);
-	int i;
+	int l = 0;
+	int x = 0;
 
-	for (i = 0; i <= len; i++)
+
+	while (*(src + l) != '\0')
 	{
-		dest[i] = src[i];
+		l++;
 	}
+	for ( ; x < l ; x++)
+	{
+		dest[x] = src[x];
+	}
+	dest[l] = '\0';
 	return (dest);
 
-}
-/**
- *_strlen - print the length of a string
- *@s: the first char of th string;
- *Return: len
- */
-int _strlen(char *s)
-{
-	int len = 0;
-
-	while (*s != '\0')
-	{
-		len++;
-		s++;
-	}
-
-	return (len);
 }
