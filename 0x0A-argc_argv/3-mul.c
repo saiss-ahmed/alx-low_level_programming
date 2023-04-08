@@ -9,26 +9,11 @@
 
 int main(int argc, char *argv[])
 {
-	int i;
-	int x = 1;
-
-	if (argc < 2)
+	if (argc != 3)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	for (i = 1; i <= argc; i++)
-	{
-		char *endptr;
-		int num = strtol(argv[i], &endptr, 10);
-
-		if (*endptr != '\0')
-		{
-		return (1);
-		}
-		x *= num;
-	}
-	printf("%i\n", x);
-
+		printf("%i\n", atoi(argv[1]) * atoi(argv[2]));
 	return (0);
 }
