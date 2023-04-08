@@ -17,13 +17,18 @@ int main(int argc, char *argv[])
 		printf("Error");
 		return (1);
 	}
-	else
+	for (i = 1; i < argc; i++)
 	{
-		for (i = 1; i < argc; i++)
+		char *endptr;
+		int num = strtol(argv[i], &endptr, 10);
+
+		if (*endptr != '\0')
 		{
-		x = x * atoi(argv[i]);
+		return (1);
 		}
-		printf("%i\n", x);
+		x *= num;
 	}
+	printf("%i\n", x);
+
 	return (0);
 }
