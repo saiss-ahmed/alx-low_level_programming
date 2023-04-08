@@ -4,7 +4,7 @@
   *main - entry point
   *@argc: the legnth of the string
   *@argv: the string
-  *Return: always 0 (success)
+  *Return: always 1 (success)
   */
 
 int main(int argc, char *argv[])
@@ -24,5 +24,5 @@ int main(int argc, char *argv[])
 		}
 		printf("%i\n", x);
 	}
-	return (0);
+	return (1);
 }
