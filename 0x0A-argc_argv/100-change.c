@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 	if (num < 0)
 	{
 		printf("0\n");
-		return (1);
+		return (0);
 	}
 	count = coin_counter(num);
 	printf("%i\n", count);
