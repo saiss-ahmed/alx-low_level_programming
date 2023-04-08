@@ -64,7 +64,7 @@ int coin_counter(int num)
 			count++;
 		}
 	}
-	if (num <2)
+	if (num < 2)
 	{
 		for (i = 0; i < num; i++)
 		{
