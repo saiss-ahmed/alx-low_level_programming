@@ -4,7 +4,7 @@
   *main - entry point
   *@argc: the legnth of the string
   *@argv: the string
-  *Return: always 1 (success)
+  *Return: 0 means success and 1 means its faulse
   */
 
 int main(int argc, char *argv[])
@@ -15,6 +15,7 @@ int main(int argc, char *argv[])
 	if (argc < 2)
 	{
 		printf("Error");
+		return (1);
 	}
 	else
 	{
@@ -24,5 +25,5 @@ int main(int argc, char *argv[])
 		}
 		printf("%i\n", x);
 	}
-	return (1);
+	return (0);
 }
