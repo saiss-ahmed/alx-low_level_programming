@@ -9,6 +9,10 @@ char *_strdup(char *str)
 {
 	int i = 0, j = 0;
 	char *arr;
+	if (str == NULL)
+	{
+		return (NULL);
+	}
 
 	while (str[i] != '\0')
 	{
