@@ -20,25 +20,27 @@ char *str_concat(char *s1, char *s2)
 	{
 		num2++;
 	}
-	if (s1 == NULL || s2 == NULL)
-	{
-		return (NULL);
-	}
 	arr = (char *) malloc((num1 + num2 + 1) * sizeof(char));
 	if (arr == NULL)
 	{
 		return (NULL);
 	}
-	while (i < num1)
+	if (s1 != NULL)
 	{
-		arr[i] = s1[i];
-		i++;
+		while (i < num1)
+		{
+			arr[i] = s1[i];
+			i++;
+		}
 	}
-	while (j < num2)
+	if (s2 != NULL)
 	{
-		arr[i] = s2[j];
-		i++;
-		j++;
+		while (j < num2)
+		{
+			arr[i] = s2[j];
+			i++;
+			j++;
+		}
 	}
 	return (arr);
 }
