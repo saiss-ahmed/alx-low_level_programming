@@ -9,8 +9,8 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int len1 = 0;
-	unsigned int len2 = 0;
+	unsigned int len1 = _strlen(s1);
+	unsigned int len2 = _strlen(s2);
 	unsigned int i = 0, j = 0;
 	char *arr;
 
@@ -24,15 +24,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s1 = (char *) malloc(1);
 		s1[0] = '\0';
 	}
-	while (s1[len1] != '\0')
+	if (n > len2)
 	{
-		len1++;
+		n = len2;
 	}
-	while (s2[len2] != '\0')
-	{
-		len2++;
-	}
-
 	arr = (char *) malloc((len1 + len2) * sizeof(char));
 	if (arr == NULL)
 	{
@@ -49,4 +44,19 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	arr[i] = '\0';
 	return (arr);
+}
+/**
+  *_strlen - a function that find the length of a string
+  *@s: the string
+  *Return: always an int
+  */
+int _strlen(char *s)
+{
+	int i = 0;
+
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
