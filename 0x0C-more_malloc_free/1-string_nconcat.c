@@ -25,7 +25,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	if (n < len2)
 	{
-		for (; j < n; j++)
+		for (; j =< n; j++)
 		{
 			arr[i] = s2[j];
 			i++;
