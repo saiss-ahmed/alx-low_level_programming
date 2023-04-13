@@ -9,6 +9,11 @@
 void *malloc_checked(unsigned int b)
 {
 	int *arr;
+	
+	if (b = 0)
+	{
+		return(NULL);
+	}
 
 	arr = (int *) malloc(b);
 
