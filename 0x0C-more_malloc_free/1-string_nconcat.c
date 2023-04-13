@@ -10,8 +10,7 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 
-	unsigned int len1;
-	unsigned int len2;
+	unsigned int len1, len2, i = 0, j = 0;
 	char *arr;
 
 	if (s1 == NULL)
@@ -26,12 +25,26 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	len1 = _strlen(s1);
 	len2 = _strlen(s2);
+	if (n >= len2)
+	{
+		n = len2;
+	}
 	arr = (char *) malloc((len1 + len2 + 1) * sizeof(char));
 	if (arr == NULL)
 	{
 		return (NULL);
 	}
-	return (concatinator(arr, s1, len1, s2, len2, n));
+	for (; i < len1; i++)
+	{
+		arr[i] = s1[i];
+	}
+	for (; j < n; j++)
+	{
+		arr[i] = s2[j];
+		i++;
+	}
+	arr[i] = '\0';
+	return (arr);
 }
 /**
   *_strlen - a function that find the length of a string
@@ -41,50 +54,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 int _strlen(char *s)
 {
 	int i = 0;
-
-	if (s != NULL)
+	
+	while (s[i] != '\0')
 	{
-		while (s[i] != '\0')
-		{
-			i++;
-		}
+		i++;
 	}
 	return (i);
-}
-/**
-  *concatinator -a function conact two strings that has other paramethers
-  *@arr: the array that would concat everything
-  *@s1: the first string
-  *@s2: the second string
-  *@len1: the length for s1
-  *@len2: length for s2
-  *@n: look for the main functio to know
-  *Return: always an array
-  */
-char *concatinator(char *arr, char *s1, int len1, char *s2, int len2, int n)
-{
-	int i = 0, j = 0;
-
-	for (; i < len1; i++)
-	{
-		arr[i] = s1[i];
-	}
-	if (n < len2)
-	{
-		for (; j < n; j++)
-		{
-			arr[i] = s2[j];
-			i++;
-		}
-	}
-	else
-	{
-		for (; j < len2; j++)
-		{
-			arr[i] = s2[j];
-			i++;
-		}
-	}
-	arr[i] = '\0';
-	return (arr);
 }
