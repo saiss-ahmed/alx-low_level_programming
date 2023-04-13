@@ -3,7 +3,7 @@
 /**
   *_calloc -  a function that allocates memory for an array
   *@nmemb: the length of the string
-  *@size: the size in byte 
+  *@size: the size in byte
   *Return: either a pointer or NULL
   */
 
