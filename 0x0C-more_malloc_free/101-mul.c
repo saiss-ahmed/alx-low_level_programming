@@ -2,12 +2,12 @@
 #include "main.h"
 
 /**
- * _atoi_digit - convert a char to integer.
+ * _atoi - convert a char to integer.
  * @x: character to convert.
  * Return: integer.
  **/
 
-int _atoi_digit(char x)
+int _atoi(char x)
 {
 	unsigned int res;
 
@@ -17,11 +17,11 @@ int _atoi_digit(char x)
 }
 
 /**
- * _isNumber - Define if a string is a number.
+ * is_number - Define if a string is a number.
  * @argv: Pointer to string.
  * Return: success (0).
  **/
-int _isNumber(char *argv)
+int is_number(char *argv)
 {
 	int i;
 
@@ -118,9 +118,9 @@ int main(int argc, char *argv[])
 {
 	int i, c, len1, len2, lenres;
 	char E[6] = {'E', 'r', 'r', 'o', 'r', '\n'};
-	char *tabres;
+	char *arr;
 
-	if (argc != 3 || _isNumber(argv[1]) == 1 || _isNumber(argv[2]) == 1)
+	if (argc != 3 || is_number(argv[1]) == 1 || is_number(argv[2]) == 1)
 	{
 		for (i = 0; i < 6; i++)
 		{
@@ -133,10 +133,10 @@ int main(int argc, char *argv[])
 	for (len2 = 0; argv[2][len2]; len2++)
 	;
 	lenres = len1 + len2;
-	tabres = _calloc(lenres, sizeof(int));
-	if (tabres == NULL)
+	arr = _calloc(lenres, sizeof(int));
+	if (arr == NULL)
 	{
-		free(tabres);
+		free(arr);
 		return (0);
 	}
 	for (i = len2 - 1, c = 0; i >= 0; i--)
@@ -144,8 +144,8 @@ int main(int argc, char *argv[])
 	tabres = mul_array(argv[1], len1, argv[2][i], tabres, (lenres - 1 - c));
 	c++;
 	}
-	print_array(tabres, lenres);
-	free(tabres);
+	print_array(arr, lenres);
+	free(arr);
 	exit(EXIT_SUCCESS);
 	return (0);
 }
