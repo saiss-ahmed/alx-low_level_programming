@@ -1,12 +1,13 @@
 #include <stdlib.h>
 #include "main.h"
+
 /**
  * _atoi_digit - convert a char to integer.
  * @x: character to convert.
  * Return: integer.
  **/
 
-int _atoi(char x)
+int _atoi_digit(char x)
 {
 	unsigned int res;
 
@@ -14,17 +15,18 @@ int _atoi(char x)
 		res = x - '0';
 	return (res);
 }
+
 /**
- * is_Number - Define if a string is a number.
+ * _isNumber - Define if a string is a number.
  * @argv: Pointer to string.
  * Return: success (0).
  **/
-int is_number(char *str)
+int _isNumber(char *argv)
 {
 	int i;
 
-	for (i = 0; str[i]; i++)
-		if (str[i] < 48 || str[i] > 57)
+	for (i = 0; argv[i]; i++)
+		if (argv[i] < 48 || argv[i] > 57)
 			return (1);
 	return (0);
 }
@@ -36,17 +38,17 @@ int is_number(char *str)
  * Return: pointer to array.
  **/
 
-void *_calloc(unsigned int n, unsigned int size)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *tab;
 	unsigned int i;
 
-	tab = malloc(size * n);
+	tab = malloc(size * nmemb);
 
 	if (tab == NULL)
 		return (NULL);
 
-	for (i = 0; i < (size * n); i++)
+	for (i = 0; i < (size * nmemb); i++)
 		tab[i] = '0';
 
 	return (tab);
@@ -116,9 +118,9 @@ int main(int argc, char *argv[])
 {
 	int i, c, len1, len2, lenres;
 	char E[6] = {'E', 'r', 'r', 'o', 'r', '\n'};
-	char *arr;
+	char *tabres;
 
-	if (argc != 3 || is_number(argv[1]) == 1 || is_number(argv[2]) == 1)
+	if (argc != 3 || _isNumber(argv[1]) == 1 || _isNumber(argv[2]) == 1)
 	{
 		for (i = 0; i < 6; i++)
 		{
@@ -130,20 +132,20 @@ int main(int argc, char *argv[])
 	;
 	for (len2 = 0; argv[2][len2]; len2++)
 	;
-		lenres = len1 + len2;
-		arr = _calloc(lenres, sizeof(int));
-	if (arr == NULL)
+	lenres = len1 + len2;
+	tabres = _calloc(lenres, sizeof(int));
+	if (tabres == NULL)
 	{
-		free(arr);
+		free(tabres);
 		return (0);
 	}
 	for (i = len2 - 1, c = 0; i >= 0; i--)
 	{
-		arr = mul_array(argv[1], len1, argv[2][i], arr, (lenres - 1 - c));
-		c++;
+	tabres = mul_array(argv[1], len1, argv[2][i], tabres, (lenres - 1 - c));
+	c++;
 	}
-	print_array(arr, lenres);
-	free(arr);
+	print_array(tabres, lenres);
+	free(tabres);
 	exit(EXIT_SUCCESS);
 	return (0);
 }
