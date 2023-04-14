@@ -117,8 +117,8 @@ int main(int argc, char *argv[])
 	;
 	for (len2 = 0; argv[2][len2]; len2++)
 	;
-	lenres = len1 + len2;
-	arr = _calloc(lenres, sizeof(int));
+		lenres = len1 + len2;
+		arr = _calloc(lenres, sizeof(int));
 	if (arr == NULL)
 	{
 		free(arr);
@@ -126,10 +126,11 @@ int main(int argc, char *argv[])
 	}
 	for (i = len2 - 1, c = 0; i >= 0; i--)
 	{
-	arr = mul_array(argv[1], len1, argv[2][i], arr, (lenres - 1 - c));
-	c++;
+		arr = mul_array(argv[1], len1, argv[2][i], arr, (lenres - 1 - c));
+		c++;
 	}
 	print_array(arr, lenres);
 	free(arr);
+	exit(EXIT_SUCCESS);
 	return (0);
 }
