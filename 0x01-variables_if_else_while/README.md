@@ -1,4 +1,4 @@
-# README FOR 
+# README FOR C - Variables, if, else, while
 
 ## Learning Objectives:
 * What are the arithmetic operators and how to use them
