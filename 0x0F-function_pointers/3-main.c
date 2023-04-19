@@ -23,6 +23,11 @@ int main(int argc, char **argv)
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
 	operator = argv[2];
+	if ((argv[2] == '/' && num2 == 0) || (argv[2] == '%' && num2 == 0))
+	{
+		printf("Error\n");
+		exit(100);	
+	}
 	if (operator[1] != '\0' || get_op_func(operator) == NULL)
 	{
 		printf("Error\n");
