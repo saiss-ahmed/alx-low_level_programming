@@ -23,14 +23,11 @@ int int_index(int *array, int size, int (*cmp)(int))
 	}
 	for (i = 0; i < size; i++)
 	{
-		if (cmp(array[i]) == i)
+		if (cmp(array[i]) != 0)
 		{
-			counter++;
+			return (counter);
 		}
+		counter++;
 	}
-	if (counter == 0)
-	{
-		return (-1);
-	}
-	return (counter);
+	return (-1);
 }
