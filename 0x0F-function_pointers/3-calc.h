@@ -4,7 +4,7 @@
 #include <string.h>
 
 /**
- * struct op - Struct op
+ * struct op_t - Struct op
  *
  * @op: The operator
  * @f: The function associated
