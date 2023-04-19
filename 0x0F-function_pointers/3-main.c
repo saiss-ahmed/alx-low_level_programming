@@ -1,19 +1,17 @@
 #include "3-calc.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 /**
-  *main - entry point
-  *@argc: the counter
-  *@argv: the string
-  *Return: always 0 (success)
-  */
+ *main - main function
+ *@argc: argument count
+ *@argv: argument vector
+ *Return: 0 for success
+ */
 
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
 	int result;
 	int num1, num2;
-	char *operator;
+	char *opr;
 
 	if (argc != 4)
 	{
@@ -22,18 +20,13 @@ int main(int argc, char **argv)
 	}
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
-	operator = argv[2];
-	if ((argv[2][0] == '/' && num2 == 0) || (argv[2][0] == '%' && num2 == 0))
-	{
-		printf("Error\n");
-		exit(100);	
-	}
-	if (operator[1] != '\0' || get_op_func(operator) == NULL)
+	opr = argv[2];
+	if (opr[1] != '\0' || get_op_func(opr) == NULL)
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	result = get_op_func(operator)(num1, num2);
+	result = (get_op_func(opr)(num1, num2));
 	printf("%d\n", result);
 	return (0);
 }
