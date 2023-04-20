@@ -9,9 +9,8 @@ void print_s(char *str, char *sp);
 void print_all(const char * const format, ...)
 {
 va_list args;
-char *s, c, *sp;
-int i, x = 0;
-float f;
+char *sp, *arg;
+int x = 0;
 
 va_start(args, format);
 while (format != NULL && format[x] != '\0')
@@ -22,20 +21,23 @@ while (format != NULL && format[x] != '\0')
 	switch (format[x])
 	{
 		case 's':
-			s = va_arg(args, char *);
-			print_s(s, sp);
+			arg = va_arg(args, char *);
+			if (arg)
+			{
+				printf("%s", arg);
+				break;
+			}
+			printf("%p", arg);
+			break;
 		break;
 		case 'i':
-			i = va_arg(args, int);
-			printf("%d%s", i, sp);
+			printf("%d%s", va_arg(args, int), sp);
 		break;
 		case 'f':
-			f = va_arg(args, double);
-			printf("%f%s", f, sp);
+			printf("%f%s", va_arg(args, double), sp);
 		break;
 		case 'c':
-			c = va_arg(args, int);
-			printf("%c%s", c, sp);
+			printf("%c%s", va_arg(args, int), sp);
 		break;
 		default:
 		break;
@@ -44,18 +46,4 @@ while (format != NULL && format[x] != '\0')
 }
 printf("\n");
 va_end(args);
-}
-/**
-  *print_s - a  function that print string
-  *@str: the string
-  *@sp: para
-  */
-void print_s(char *str, char *sp)
-{
-	if (str == NULL)
-	{
-		printf("(nil)");
-		return;
-	}
-	printf("%s%s", sp, str);
 }
