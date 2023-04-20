@@ -1,6 +1,7 @@
 #include "variadic_functions.h"
 #include <stdio.h>
 #include <string.h>
+void print_s(char *str, char *sp);
 /**
   *print_all -  a function that prints anything.
   *@format: the lost of types of arguments passed to the function
@@ -8,15 +9,13 @@
 void print_all(const char * const format, ...)
 {
 va_list args;
-char *s, c;
+char *s, c, *sp;
 int i, x = 0;
 float f;
 
 va_start(args, format);
 while (format != NULL && format[x] != '\0')
 {
-	char *sp;
-
 	sp = ", ";
 	if (format[x + 1] == '\0')
 		sp = "";
@@ -24,9 +23,7 @@ while (format != NULL && format[x] != '\0')
 	{
 		case 's':
 			s = va_arg(args, char *);
-			if (s == NULL)
-				printf("(nil)");
-			printf("%s%s", s, sp);
+			print_s(s, sp);
 		break;
 		case 'i':
 			i = va_arg(args, int);
@@ -48,4 +45,17 @@ while (format != NULL && format[x] != '\0')
 printf("\n");
 va_end(args);
 }
-
+/**
+  *print_s - a  function that print string
+  *@str: the string
+  *@sp: para
+  */
+void print_s(char *str, char *sp)
+{
+	if (str == NULL)
+	{
+		printf("(nil)");
+		return;
+	}
+	printf("%s%s", sp, str);
+}
