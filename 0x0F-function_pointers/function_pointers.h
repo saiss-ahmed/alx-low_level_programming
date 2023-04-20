@@ -1,5 +1,9 @@
 #ifndef FUNCTION_POINTERS_H
 #define FUNCTION_POINTERS_H
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <stddef.h>
 typedef __SIZE_TYPE__ size_t; 
 typedef unsigned char addr;
