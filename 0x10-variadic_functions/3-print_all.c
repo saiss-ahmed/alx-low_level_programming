@@ -27,7 +27,7 @@ while (format != NULL && format[x] != '\0')
 				printf("%s", arg);
 				break;
 			}
-			printf("%p", arg);
+			printf("%s", arg);
 			break;
 		break;
 		case 'i':
