@@ -22,13 +22,12 @@ while (format != NULL && format[x] != '\0')
 	{
 		case 's':
 			arg = va_arg(args, char *);
-			if (arg)
+			if (arg == NULL)
 			{
-				printf("%s%s", arg, sp);
+				printf("(nil)%s", sp);
 				break;
 			}
 			printf("%s%s", arg, sp);
-			break;
 		break;
 		case 'i':
 			printf("%d%s", va_arg(args, int), sp);
