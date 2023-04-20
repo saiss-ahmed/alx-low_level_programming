@@ -24,10 +24,10 @@ while (format != NULL && format[x] != '\0')
 			arg = va_arg(args, char *);
 			if (arg)
 			{
-				printf("%s", arg);
+				printf("%s%s", arg, sp);
 				break;
 			}
-			printf("%s", arg);
+			printf("%s%s", arg, sp);
 			break;
 		break;
 		case 'i':
