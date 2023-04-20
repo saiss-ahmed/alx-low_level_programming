@@ -35,9 +35,12 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			{
 				if (s == NULL)
 				{
-				printf("(nil)%s", separator);
+					printf("(nil)%s", separator);
 				}
-				printf("%s%s", s, separator);
+				else 
+				{
+					printf("%s%s", s, separator);
+				}
 			}
 			else
 			{
