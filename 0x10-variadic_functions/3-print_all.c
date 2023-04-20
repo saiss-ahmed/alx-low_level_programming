@@ -8,25 +8,25 @@
 void print_all(const char * const format, ...)
 {
 va_list args;
-char *s, *sp, c;
+char *s, c;
 int i, x = 0;
 float f;
 
 va_start(args, format);
 while (format != NULL && format[x] != '\0')
 {
+	char *sp;
+
+	sp = ", ";
 	if (format[x + 1] == '\0')
 		sp = "";
-	else
-		sp = ", ";
 	switch (format[x])
 	{
 		case 's':
 			s = va_arg(args, char *);
 			if (s == NULL)
 				printf("(nil)");
-			else
-				printf("%s%s", s, sp);
+			printf("%s%s", s, sp);
 		break;
 		case 'i':
 			i = va_arg(args, int);
