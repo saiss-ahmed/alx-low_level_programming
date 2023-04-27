@@ -1,4 +1,4 @@
-#include "main.h"
+#include "lists.h"
 #include <stdio.h>
 /**
   *print_before_main - a function that print before the main fucntion
