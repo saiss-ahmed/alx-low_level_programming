@@ -3,8 +3,8 @@
 
 /**
  * insert_nodeint_at_index - inserts a new node at a given position
- * @head: pointer to the beginning of linked list
- * @idx: index where to insert
+ * @head: pointer to the head
+ * @idx: index 
  * @n: value for n
  * Return: address of new node or NULL if fails
  */
