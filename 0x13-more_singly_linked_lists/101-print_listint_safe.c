@@ -1,4 +1,7 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "lists.h"
+
 /**
  * print_listint_safe - prints a linked list of integers
  * @head: pointer to the head of the linked list
@@ -7,23 +10,27 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t count = 0;
+	int count = 0;
 	const listint_t *current = head;
+	const listint_t *visited[1024] = {NULL};
+	int i;
 
 	while (current != NULL)
 	{
-		printf("[%p] %d\n", (void *)current, current->n);
-		count++;
-
-		if (current->next >= current)
+		for (i = 0; i <= count; i++)
 		{
-			printf("-> [%p] %d\n", (void *)current->next, current->next->n);
-			return (98);
+			if (visited[i] == current)
+			{
+				printf("-> [%p] %d\n", (void *)current, current->n);
+				return (count);
+			}
 		}
 
+		printf("[%p] %d\n", (void *)current, current->n);
+		visited[count] = current;
+		count++;
 		current = current->next;
-		}
-
-		return (count);
+	}
+	return (count);
 }
 
