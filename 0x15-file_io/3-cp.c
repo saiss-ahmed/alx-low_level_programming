@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * copy_text_file - copies one file to the other (cp function)
+ * copy_text_file - copies one file to the other
  * @f1: opened file1 (file to copy)
  * @f2: opened file2 (new copy)
  * @file1: name of file1
@@ -39,7 +39,7 @@ void copy_text_file(int f1, int f2, char *file1, char *file2)
 }
 
 /**
-  * main - copy a file into another file (cp command)
+  * main - copy a file into another file
   * @argc: number of arguments
   * @argv: arguments
   * Return: 0 if succesfull
