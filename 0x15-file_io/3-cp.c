@@ -1,7 +1,6 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-
 /**
  * copy_text_file - copies one file to the other
  * @f1: opened file1 (file to copy)
@@ -9,7 +8,6 @@
  * @file1: name of file1
  * @file2: name of file2
  */
-
 void copy_text_file(int f1, int f2, char *file1, char *file2)
 {
 	ssize_t lenRead = 1, lenWrite = 1;
@@ -37,14 +35,12 @@ void copy_text_file(int f1, int f2, char *file1, char *file2)
 		}
 	}
 }
-
 /**
   * main - copy a file into another file
   * @argc: number of arguments
   * @argv: arguments
   * Return: 0 if succesfull
   */
-
 int main(int argc, char **argv)
 {
 	int f1, f2;
