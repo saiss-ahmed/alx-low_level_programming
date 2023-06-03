@@ -1,6 +1,6 @@
-# ALX Low-Level Programming - 0x0E-structures_typedef
+# ALX Low-Level Programming - 0x0F-function_pointers
 
-Welcome to the ALX Low-Level Programming - 0x0E-structures_typedef project! This project focuses on structures and typedef in the C programming language.
+Welcome to the ALX Low-Level Programming - 0x0F-function_pointers project! This project focuses on function pointers in the C programming language.
 
 ## Table of Contents
 
@@ -12,42 +12,41 @@ Welcome to the ALX Low-Level Programming - 0x0E-structures_typedef project! This
 
 ## Description
 
-The 0x0E-structures_typedef project is part of the ALX Low-Level Programming curriculum. In this project, we explore the concepts of structures and typedef.
+The 0x0F-function_pointers project is part of the ALX Low-Level Programming curriculum. In this project, we explore the concept of function pointers and their usage in C.
 
-A structure is a user-defined data type in C that allows you to group together related data items of different types. It provides a way to create a composite data type that can hold multiple pieces of information.
+In C, functions are treated as first-class citizens, which means they can be passed as arguments to other functions and returned from functions. Function pointers allow us to store the address of a function and invoke it later through the pointer.
 
-Typedef, on the other hand, is a keyword in C that allows you to create an alias or a new name for an existing data type. It provides a way to make the code more readable and maintainable by defining custom names for complex data types.
-
-By completing the tasks in this project, you will learn how to define and use structures, as well as create aliases for data types using typedef.
+By completing the tasks in this project, you will learn how to declare and use function pointers, as well as understand their practical applications in C programming.
 
 ## Project Tasks
 
-The project consists of several tasks, each focusing on different aspects of structures and typedef. The tasks include:
+The project consists of several tasks, each focusing on different aspects of function pointers. The tasks include:
 
-1. 0. Django
-2. 1. A dog is the only thing on earth that loves you more than you love yourself
-3. 2. A dog will teach you unconditional love. If you can have that in your life, things won't be too bad
-4. 3. Outside of a dog, a book is a man's best friend. Inside of a dog, it's too dark to read
-5. 4. A door is what a dog is perpetually on the wrong side of
-6. 5. How many legs does a dog have if you call its tail a leg? Four. Calling a tail a leg doesn't make it a leg.
+1. 0. What's my name
+2. 1. If you spend too much time thinking about a thing, you'll never get it done
+3. 2. To hell with circumstances; I create opportunities
+4. 3. A goal is not always meant to be reached, it often serves simply as something to aim at.
+5. 4. Most hackers are young because young people tend to be adaptable. As long as you remain adaptable, you can always be a good hacker.
+6. 5. The best thing about a boolean is even if you are wrong, you are only off by a bit.
+7. 6. I will show you how great I am.
 
-Each task involves writing C code that utilizes structures and typedef to achieve the desired functionality.
+Each task involves writing C code that utilizes function pointers to achieve the desired functionality.
 
 ## Getting Started
 
-To get started with the 0x0E-structures_typedef project, follow these steps:
+To get started with the 0x0F-function_pointers project, follow these steps:
 
 1. Clone the repository to your local machine using the following command:
    ```
    git clone https://github.com/saiss-ahmed/alx-low_level_programming.git
    ```
 
-2. Navigate to the "0x0E-structures_typedef" directory:
+2. Navigate to the "0x0F-function_pointers" directory:
    ```
-   cd alx-low_level_programming/0x0E-structures_typedef
+   cd alx-low_level_programming/0x0F-function_pointers
    ```
 
-3. Explore the individual task files (e.g., "dog.h", "lists.h", etc.) and implement the required code to complete each task.
+3. Explore the individual task files (e.g., "function_pointers.h", "3-main.c", etc.) and implement the required code to complete each task.
 
 4. Compile and run the C files to test your implementations.
 
@@ -55,4 +54,4 @@ To get started with the 0x0E-structures_typedef project, follow these steps:
 
 6. Once you have completed the tasks, you can submit your solutions for review and evaluation.
 
-Feel free to experiment and explore additional use cases of structures and typedef to deepen your understanding.
+Feel free to experiment and explore additional use cases of function pointers to deepen your understanding.
