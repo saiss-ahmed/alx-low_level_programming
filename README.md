@@ -7,8 +7,6 @@ Welcome to the ALX Low-Level Programming repository! This repository contains a 
 - [Description](#description)
 - [Projects](#projects)
 - [Getting Started](#getting-started)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Description
 
@@ -35,9 +33,7 @@ The ALX Low-Level Programming repository includes the following projects:
 - [0x0A-argc_argv](https://github.com/saiss-ahmed/alx-low_level_programming/tree/main/0x0A-argc_argv)
 - [0x0B-malloc_free](https://github.com/saiss-ahmed/alx-low_level_programming/tree/main/0x0B-malloc_free)
 - [0x0C-more_malloc_free](https://github.com/saiss-ahmed/alx-low_level_programming/tree/main/0x0C-more_malloc_free)
-- [0x0D-preprocessor](https://github.com/saiss-ahmed/alx-low_level_programming/tree/main/0
-
-x0D-preprocessor)
+- [0x0D-preprocessor](https://github.com/saiss-ahmed/alx-low_level_programming/tree/main/0x0D-preprocessor)
 - [0x0E-structures_typedef](https://github.com/saiss-ahmed/alx-low_level_programming/tree/main/0x0E-structures_typedef)
 - [0x0F-function_pointers](https://github.com/saiss-ahmed/alx-low_level_programming/tree/main/0x0F-function_pointers)
 - [0x10-variadic_functions](https://github.com/saiss-ahmed/alx-low_level_programming/tree/main/0x10-variadic_functions)
