@@ -1,5 +1,3 @@
-
-```markdown
 # ALX Low-Level Programming - 0x0D-preprocessor
 
 Welcome to the ALX Low-Level Programming - 0x0D-preprocessor project! This project focuses on the preprocessor in the C programming language.
@@ -65,4 +63,4 @@ Contributions to the ALX Low-Level Programming - 0x0D-preprocessor project are a
 ## License
 
 The ALX Low-Level Programming - 0x0D-preprocessor project is licensed under the MIT License. See the [LICENSE](https://github.com/saiss-ahmed/alx-low_level_programming/blob/main/LICENSE) file for more information.
-```
+
